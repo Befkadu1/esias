@@ -117,12 +117,3 @@ $(document).on('click', '#home', function(){
   $('.page-content').append(displayFooter());
 
 });
-
-/*$(document).on('click', '#contact', function(){
-
-  $('.col-md-8').remove(); 
-  $('.footer').remove();
-  $('.page-content').append(about_us(arrArticles[1]));
-  $('.page-content').append(displayFooter());
-
-});*/
