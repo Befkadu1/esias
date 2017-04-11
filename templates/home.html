@@ -1,0 +1,32 @@
+function article (data){ return`
+<article class="col-md-8 article_home">
+ <div>
+ 	<!--<p class="dateTime">Publicerat: ${data.date}</p>-->
+	<h1 class="title">${data.headLine}</h1>
+	<!--<p><strong>${data.ingress.join("<strong><p></p></strong>")}</strong></p>
+	<p class="authorName">Skribent: ${data.author}</p>-->
+</div>
+   <p >${data.text.join("<p></p>")}</p>
+	<!--<p>${data.text.join("<p></p>")}</p>
+	
+	<div class="row">
+  <div class="col-xs-12 col-md-12">
+    <a href="#" class="thumbnail">
+      <img src= "${data.picture}">
+    </a>
+  </div>
+</div>-->
+
+	<!-- 16:9 aspect ratio -->
+<!-- <div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="${data.video}"></iframe>
+</div> -->
+
+	<!-- <div>
+	   <iframe width="560" height="315" src =  frameborder="0" allowfullscreen></iframe>
+	</div> -->
+	
+
+</article>
+`
+};

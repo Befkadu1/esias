@@ -1,0 +1,18 @@
+User stories
+The user can see home page
+the user can see the contact page
+the user can see the about us page
+The page can be posted on fb
+
+Tasks
+create skleton for Home
+create skleton contact page
+create skleton about us page
+Pages should be responsive
+Create JSON file
+CSS
+Create links on the right side/puffs (for Events)
+fix facebook, tweeter links
+
+
+
