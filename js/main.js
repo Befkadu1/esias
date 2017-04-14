@@ -60,36 +60,63 @@ $.getJSON("json/articles.json", function (data) {
 
 function start(){
   var showContact = contact();
+  this.home = '/home';
   this.kontakt = '/kontakt';
   this.about = '/about';
+  this.about = '/membership';
   this.our_programs = '/our_programs';
 
   $('.page-content').append(displayNavbar());
   console.log(arrArticles[arrArticles.length -1]);
   //$('.page-content').append(article(arrArticles[arrArticles.length -1]));
-  $('.page-content').append(article(arrArticles[0]));
+  $('.page-content').append(article(arrArticles[0],arrArticles[1],arrArticles[2]));
   $('.page-content').append(displayFooter());
 
   var router = new Router({
+
+      '/home': ()=>{ 
+        console.log("********** test in router");
+        $('.col-xs-12').remove(); 
+        $('.footer').remove();
+        $('.navbar_class').remove();
+        $('.page-content').append(displayNavbar());
+        $('.page-content').append(article(arrArticles[0],arrArticles[1]));
+        $('.page-content').append(displayFooter());
+
+        },
       '/kontakt': ()=>{ 
         console.log("********** test in router");
-        $('.col-md-8').remove(); 
+        $('.col-xs-12').remove(); 
         $('.footer').remove();
+        $('.navbar_class').remove();
+        $('.page-content').append(displayNavbar());
         $('.page-content').append(showContact);
         $('.page-content').append(displayFooter());
 
         },
 
         '/about': ()=>{ 
-          $('.col-md-8').remove(); 
+          $('.col-xs-12').remove(); 
           $('.footer').remove();
-          $('.page-content').append(about_us(arrArticles[1]));
+          $('.navbar_class').remove();
+          $('.page-content').append(displayNavbar());
+          $('.page-content').append(about_us(arrArticles[0]));
+          $('.page-content').append(displayFooter());
+
+        },
+        '/membership': ()=>{ 
+          $('.col-xs-12').remove(); 
+          $('.footer').remove();
+          $('.navbar_class').remove();
+          $('.page-content').append(displayNavbar());
+          $('.page-content').append(membership(arrArticles[1]));
           $('.page-content').append(displayFooter());
 
         },
         '/our_programs': ()=>{ 
           $('.col-md-8').remove(); 
           $('.footer').remove();
+          $('.page-content').append(displayNavbar());
           $('.page-content').append(our_programs(arrArticles[3]));
           $('.page-content').append(displayFooter());
 

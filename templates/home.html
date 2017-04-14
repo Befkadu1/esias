@@ -1,30 +1,33 @@
-function article (data){ return`
-<article class="col-md-8 article_home">
- <div>
- 	<!--<p class="dateTime">Publicerat: ${data.date}</p>-->
-	<h1 class="title">${data.headLine}</h1>
-	<!--<p><strong>${data.ingress.join("<strong><p></p></strong>")}</strong></p>
-	<p class="authorName">Skribent: ${data.author}</p>-->
-</div>
-   <p >${data.text.join("<p></p>")}</p>
-	<!--<p>${data.text.join("<p></p>")}</p>
-	
-	<div class="row">
-  <div class="col-xs-12 col-md-12">
-    <a href="#" class="thumbnail">
-      <img src= "${data.picture}">
-    </a>
-  </div>
-</div>-->
+function article (data1,data2){ return`
+<article class="col-xs-12 article_home">
+ <section class="home_page">
+   <div id= "home_image_div">
+ 	<h1 class="home_text1">Ethiopian</h1>
+ 	<h1 class="home_text2">Support & Integration Association in</h1>
+ 	<h1 class="home_text3">Skåne</h1>
+ 	</div>
 
-	<!-- 16:9 aspect ratio -->
-<!-- <div class="embed-responsive embed-responsive-16by9">
-  <iframe class="embed-responsive-item" src="${data.video}"></iframe>
-</div> -->
+</section>
 
-	<!-- <div>
-	   <iframe width="560" height="315" src =  frameborder="0" allowfullscreen></iframe>
-	</div> -->
+<section id= "article_aboutus">
+	<div class = "aboutus_home_left col-md-8">
+		<h1 class="title">${data1.headLine}</h1>
+		<p >${data1.text}</p>
+	</div>
+	<div class="puffs col-xs-12 col-md-4">
+		
+	</div>
+
+</section>
+
+<section id= "article_aboutus">
+<h1 class="title">${data2.headLine}</h1>
+<p >${data2.text}</p>
+
+</section>
+
+  
+
 	
 
 </article>

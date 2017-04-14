@@ -1,13 +1,13 @@
 function about_us (data){ return`
-<article class="col-md-8 article_aboutus">
- <div>
- 	
-	<h1 class="title">${data.headLine}</h1>
-</div>
-   <p >${data.text.join("<p></p>")}</p>
+<section id= "article_aboutus">
+	<div class = "aboutus_home_left col-md-8">
+		<h1 class="title">${data.headLine}</h1>
+		<p >${data.text.join("<p></p>")}</p>
+	</div>
+	<div class="puffs col-xs-12 col-md-4">
+		
+	</div>
 
-	
-
-</article>
+</section>
 `
 };

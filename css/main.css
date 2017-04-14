@@ -1,3 +1,54 @@
+
+ section{
+    height:80vh;
+    width:80%; 
+    margin-bottom: 50px;  
+    text-align: center;
+    margin: 0 auto;
+    border: 2px solid black;
+
+}
+
+#home_image_div{ 
+background-image: url(http://www.ethiopianembassy.be/wp-content/uploads/Ethiopia-Sweden.jpeg);
+margin: 50px, 50px;
+background-size: cover;
+background-position:center; 
+position:relative; 
+height:80vh;
+border: 2px solid black;
+background-color: #cccccc;
+
+}
+
+.home_text1,.home_text2,.home_text3{
+    font-family: georgia,palatino,book antiqua,palatino linotype,serif;
+    font-style: normal;
+    color:white;
+    font-size:5em;
+    position:absolute;
+    text-shadow:-1px -1px gainsboro;
+}
+.home_text1{
+    top:35%; 
+    left: 42%;
+}
+.home_text2{
+    top:45%; 
+    left: 10%;
+}
+.home_text3{
+    top:55%; 
+    left: 42%;
+}
+.title{
+   text-align: left; 
+}
+.puffs{
+    border: 2px solid black;
+    margin-top: 45px;
+    height: 200px;
+}
 .footer {    
     width: 100%;
     height: 150px;
@@ -11,15 +62,28 @@
     color:white;
 }
 p{
-	font-size: 16px;
+	font-size: 24px;
+    text-align: left;
+    padding-left: 10px; 
+    padding-right: 10px;
 }
 
-.col-md-8 ,.article_home {
-	margin-left: 50px;
-	margin-bottom: 50px; 
-}
+
 
 .navbar_class {
     margin-top: 50px;
+}
+
+.logo1{
+  margin-top:50px;
+  margin-left:25px;
+  text-align: center;
+  opacity:0.5;
+  animation:spin 240s linear infinite;
+}
+@keyframes spin { 
+  100% { 
+    transform:rotate(180deg); 
+  } 
 }
 
