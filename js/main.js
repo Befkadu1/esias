@@ -51,8 +51,9 @@ $.ajax({
   console.log('reading all the the lorems-ipsums left joins', data);
 });
 */
-var arrArticles = [];
-$.getJSON("json/articles.json", function (data) {
+
+var arrArticles = []; //An array to hold all the articles
+$.getJSON("json/articles.json", function (data) { //get the articles from the json file
   console.log(data);
   arrArticles = data;
   $(start);
@@ -60,13 +61,13 @@ $.getJSON("json/articles.json", function (data) {
 
 function start(){
   var showContact = contact();
-  this.home = '/home';
+  /*routing*/
+  this.home = '/home'; 
   this.kontakt = '/kontakt';
   this.about = '/about';
   this.about = '/membership';
   this.our_programs = '/our_programs';
   
-  $('.footer').remove();
   $('.page-content').append(displayNavbar());
   console.log(arrArticles[arrArticles.length -1]);
   $('.page-content').append(article(arrArticles[0],arrArticles[1]));
@@ -77,7 +78,6 @@ function start(){
       '/home': ()=>{ 
         console.log("********** test in router");
         $('.page-content').empty(); 
-        $('.footer').remove();
         $('.page-content').append(displayNavbar());
         $('.page-content').append(article(arrArticles[0],arrArticles[1]));
         $('.page-content').append(displayFooter());
@@ -85,8 +85,6 @@ function start(){
       '/kontakt': ()=>{ 
         console.log("********** test in router");
         $('.page-content').empty(); 
-        $('.footer').remove();
-        $('.navbar_class').remove();
         $('.page-content').append(displayNavbar());
         $('.page-content').append(showContact);
         $('.page-content').append(displayFooter());
@@ -95,25 +93,20 @@ function start(){
 
         '/about': ()=>{ 
           $('.page-content').empty(); 
-          $('.footer').remove();
-          $('.navbar_class').remove();
           $('.page-content').append(displayNavbar());
           $('.page-content').append(about_us(arrArticles[0]));
-         $('.page-content').append(displayFooter());
+          $('.page-content').append(displayFooter());
 
         },
         '/membership': ()=>{ 
           $('.page-content').empty(); 
-          $('.footer').remove();
-          $('.navbar_class').remove();
           $('.page-content').append(displayNavbar());
           $('.page-content').append(membership(arrArticles[1]));
-          $('#article_membership').after(displayFooter());
+          $('.page-content').append(displayFooter());
 
         },
         '/our_programs': ()=>{ 
-          $('.col-md-8').remove(); 
-          $('.footer').remove();
+          $('.page-content').empty(); 
           $('.page-content').append(displayNavbar());
           $('.page-content').append(our_programs(arrArticles[3]));
           $('.page-content').append(displayFooter());

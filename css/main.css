@@ -110,13 +110,33 @@ p{
 }
 
 .home_text1,.home_text2,.home_text3{
-  font-size: 16px;
-
+  font-size: 18px;
  } 
  .puffs{
     height: 500px;
     margin-top: 10px;
 }
 
+}
+
+/*mobile: orientation: landscape */
+@media(max-width: 668px) 
+and (orientation: landscape)
+{
+
+.navbar_class{
+    width:100%;     
+ }
+  section{
+   height:auto !important;  
+}
+.home_text1,.home_text2,.home_text3{
+  font-size: 18px;
+  text-align: center;
+ } 
+ .home_text2{
+    top:45%; 
+    left: 25%;
+}
 }
 
