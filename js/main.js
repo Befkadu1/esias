@@ -65,28 +65,26 @@ function start(){
   this.about = '/about';
   this.about = '/membership';
   this.our_programs = '/our_programs';
-
+  
+  $('.footer').remove();
   $('.page-content').append(displayNavbar());
   console.log(arrArticles[arrArticles.length -1]);
-  //$('.page-content').append(article(arrArticles[arrArticles.length -1]));
-  $('.page-content').append(article(arrArticles[0],arrArticles[1],arrArticles[2]));
+  $('.page-content').append(article(arrArticles[0],arrArticles[1]));
   $('.page-content').append(displayFooter());
 
   var router = new Router({
 
       '/home': ()=>{ 
         console.log("********** test in router");
-        $('.col-xs-12').remove(); 
+        $('.page-content').empty(); 
         $('.footer').remove();
-        $('.navbar_class').remove();
         $('.page-content').append(displayNavbar());
         $('.page-content').append(article(arrArticles[0],arrArticles[1]));
         $('.page-content').append(displayFooter());
-
         },
       '/kontakt': ()=>{ 
         console.log("********** test in router");
-        $('.col-xs-12').remove(); 
+        $('.page-content').empty(); 
         $('.footer').remove();
         $('.navbar_class').remove();
         $('.page-content').append(displayNavbar());
@@ -96,21 +94,21 @@ function start(){
         },
 
         '/about': ()=>{ 
-          $('.col-xs-12').remove(); 
+          $('.page-content').empty(); 
           $('.footer').remove();
           $('.navbar_class').remove();
           $('.page-content').append(displayNavbar());
           $('.page-content').append(about_us(arrArticles[0]));
-          $('.page-content').append(displayFooter());
+         $('.page-content').append(displayFooter());
 
         },
         '/membership': ()=>{ 
-          $('.col-xs-12').remove(); 
+          $('.page-content').empty(); 
           $('.footer').remove();
           $('.navbar_class').remove();
           $('.page-content').append(displayNavbar());
           $('.page-content').append(membership(arrArticles[1]));
-          $('.page-content').append(displayFooter());
+          $('#article_membership').after(displayFooter());
 
         },
         '/our_programs': ()=>{ 
