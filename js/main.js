@@ -52,11 +52,16 @@ $.ajax({
 });
 */
 
-var arrArticles = []; //An array to hold all the articles
+var arrArticles, priorityAreas; //An object to hold all the articles and the priority areas
+//var priorityAreas = []; //An object to hold the priority areas
 $.getJSON("json/articles.json", function (data) { //get the articles from the json file
   console.log(data);
   arrArticles = data;
+  $.getJSON("json/priorityAreas.json", function (data) { //get the priorityAreas from the json file
+  console.log(data);
+  priorityAreas = data;
   $(start);
+  });
 });
 
 function start(){
@@ -66,7 +71,7 @@ function start(){
   this.kontakt = '/kontakt';
   this.about = '/about';
   this.about = '/membership';
-  this.our_programs = '/our_programs';
+  this.priority_areas = '/priority_areas';
   
   $('.page-content').append(displayNavbar());
   console.log(arrArticles[arrArticles.length -1]);
@@ -105,10 +110,10 @@ function start(){
           $('.page-content').append(displayFooter());
 
         },
-        '/our_programs': ()=>{ 
+        '/priority_areas': ()=>{ 
           $('.page-content').empty(); 
           $('.page-content').append(displayNavbar());
-          $('.page-content').append(our_programs(arrArticles[3]));
+          $('.page-content').append(priority_areas(priorityAreas));
           $('.page-content').append(displayFooter());
 
         }
@@ -118,15 +123,6 @@ function start(){
 
 }
 
-/*$(document).on('click', '#about_us', function(){
-
-  $('.col-md-8').remove(); 
-  $('.footer').remove();
-  $('.page-content').append(about_us(arrArticles[1]));
-  $('.page-content').append(displayFooter());
-
-});
-*/
 $(document).on('click', '#home', function(){
 
   $('.col-md-8').remove(); 
