@@ -52,7 +52,7 @@ $.ajax({
 });
 */
 
-var arrArticles, priorityAreas; //An object to hold all the articles and the priority areas
+var arrArticles, priorityAreas, team; //An object to hold all the articles and the priority areas
 //var priorityAreas = []; //An object to hold the priority areas
 $.getJSON("json/articles.json", function (data) { //get the articles from the json file
   console.log(data);
@@ -60,7 +60,11 @@ $.getJSON("json/articles.json", function (data) { //get the articles from the js
   $.getJSON("json/priorityAreas.json", function (data) { //get the priorityAreas from the json file
   console.log(data);
   priorityAreas = data;
+  $.getJSON("json/team.json", function (data) { //get the priorityAreas from the json file
+    console.log(data);
+  team = data;
   $(start);
+  });
   });
 });
 
@@ -72,6 +76,7 @@ function start(){
   this.about = '/about';
   this.about = '/membership';
   this.priority_areas = '/priority_areas';
+  this.team = '/team';
   
   $('.page-content').append(displayNavbar());
   console.log(arrArticles[arrArticles.length -1]);
@@ -81,41 +86,28 @@ function start(){
   var router = new Router({
 
       '/home': ()=>{ 
-        console.log("********** test in router");
-        $('.page-content').empty(); 
-        $('.page-content').append(displayNavbar());
-        $('.page-content').append(article(arrArticles[0],arrArticles[1]));
-        $('.page-content').append(displayFooter());
+        showPage(article(arrArticles[0],arrArticles[1]));
         },
+        
       '/kontakt': ()=>{ 
-        console.log("********** test in router");
-        $('.page-content').empty(); 
-        $('.page-content').append(displayNavbar());
-        $('.page-content').append(showContact);
-        $('.page-content').append(displayFooter());
-
+        showPage(showContact);
         },
 
         '/about': ()=>{ 
-          $('.page-content').empty(); 
-          $('.page-content').append(displayNavbar());
-          $('.page-content').append(about_us(arrArticles[0]));
-          $('.page-content').append(displayFooter());
+          showPage(about_us(arrArticles[0]));
 
         },
+
         '/membership': ()=>{ 
-          $('.page-content').empty(); 
-          $('.page-content').append(displayNavbar());
-          $('.page-content').append(membership(arrArticles[1]));
-          $('.page-content').append(displayFooter());
-
+          showPage(membership(arrArticles[1]));  
         },
-        '/priority_areas': ()=>{ 
-          $('.page-content').empty(); 
-          $('.page-content').append(displayNavbar());
-          $('.page-content').append(priority_areas(priorityAreas));
-          $('.page-content').append(displayFooter());
 
+        '/priority_areas': ()=>{ 
+          showPage(priority_areas(priorityAreas));          
+        },
+
+        '/team': ()=>{ 
+         showPage(displayTeam(team));            
         }
   });
 
@@ -123,11 +115,10 @@ function start(){
 
 }
 
-$(document).on('click', '#home', function(){
+function showPage(page){
+    $('.page-content').empty();
+    $('.page-content').append(displayNavbar());
+    $('.page-content').append(page);
+    $('.page-content').append(displayFooter());
+  }
 
-  $('.col-md-8').remove(); 
-  $('.footer').remove();
-  $('.page-content').append(article(arrArticles[0]));
-  $('.page-content').append(displayFooter());
-
-});
