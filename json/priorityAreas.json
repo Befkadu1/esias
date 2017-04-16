@@ -1,0 +1,40 @@
+[
+	{
+		"id": "1",
+		"headLine": "Education & Research  ",
+		"picture": "https://static.wixstatic.com/media/0eea4755fe7a4c0a84dafb7a5e7b6e04.png/v1/fill/w_115,h_115,al_c,usm_0.66_1.00_0.01/0eea4755fe7a4c0a84dafb7a5e7b6e04.png ",
+		"text": ["We organize research conferences and workshops to widen the awareness of our community on different social, cultural, economic, scientific and academic matters related to Ethiopia and Sweden."]		
+	},
+	{
+		"id": "2",
+		"headLine": "Entrepreneurship",
+		"picture": "https://static.wixstatic.com/media/4f4d04e795e74febbe747fb6ca659a39.png/v1/fill/w_95,h_95,al_c,usm_0.66_1.00_0.01/4f4d04e795e74febbe747fb6ca659a39.png",
+		"text": ["We provide entrepreneurial trainings, mentorship, business contacts and networks for people who aspire to establish their ventures in Sweden in collaboration with different organisations."]		
+	},
+	{
+		"id": "3",
+		"headLine": "Employment",
+		"picture": "https://static.wixstatic.com/media/08f5bb_0a4aa14ec9ab41438d512f7086f44a4c~mv2.jpg/v1/fill/w_95,h_71,al_c,q_80,usm_0.66_1.00_0.01/08f5bb_0a4aa14ec9ab41438d512f7086f44a4c~mv2.webp",
+		"text": ["We assist our community members to develop the skills necessary for the Swedish labour market."]		
+	},
+	{
+		"id": "4",
+		"headLine": "Culture",
+		"picture": "https://static.wixstatic.com/media/08f5bb_1724a6d770eb456fa5620f9758b40523~mv2.jpg/v1/fill/w_95,h_60,al_c,q_80,usm_0.66_1.00_0.01/08f5bb_1724a6d770eb456fa5620f9758b40523~mv2.webp",
+		"text": ["We organize different cultural activities and events to strengthen our friendship and togetherness. "]		
+	},
+	{
+		"id": "5",
+		"headLine": "Community Outreach",
+		"picture": "https://static.wixstatic.com/media/08f5bb_fddd156b59a4422bb25ae89299c7a885~mv2_d_2400_2382_s_2.png/v1/fill/w_95,h_94,al_c,usm_0.66_1.00_0.01/08f5bb_fddd156b59a4422bb25ae89299c7a885~mv2_d_2400_2382_s_2.png",
+		"text": ["We organize informative meetings and workshops to provide newcomers with information about the Swedish values and system so that they can fully participate in the economic, social, cultural and civic life in Sweden", "We also arrange classes to teach Ethiopian languages for children born in Sweden and those who are interested to know the languages for travel, education and research purposes."]		
+	},
+	
+	{
+		"id": "6",
+		"headLine": "Gender & Health",
+		"picture": "https://static.wixstatic.com/media/08f5bb_cc17b3f4c8a14d4b9b3b9c8c2e05ef12~mv2.jpg/v1/fill/w_95,h_84,al_c,q_80,usm_0.66_1.00_0.01/08f5bb_cc17b3f4c8a14d4b9b3b9c8c2e05ef12~mv2.webp",
+		"text": ["We also have informative programs focusing on gender and gender equity, gender roles, family health, productivity, sexuality and similar topics in the context of Sweden and Ethiopia. "]		
+	}
+
+]
