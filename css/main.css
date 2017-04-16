@@ -89,6 +89,14 @@ p{
     font-size: 14px;
     text-align: center;
 }
+
+.priority_area_picture {
+    object-fit: contain;
+    margin-top: 20px;
+}
+.priority_rows {
+    overflow:auto;
+}
 /*.logo1{
   margin-top:50px;
   margin-left:25px;
@@ -115,6 +123,9 @@ p{
  .puffs{
     height: 500px;
     margin-top: 10px;
+}
+.priority_rows {
+    margin-bottom: 50px;
 }
 
 }
