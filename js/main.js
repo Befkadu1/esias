@@ -78,47 +78,101 @@ function start(){
   this.priority_areas = '/priority_areas';
   this.team = '/team';
   
-  $('.page-content').append(displayNavbar());
-  console.log(arrArticles[arrArticles.length -1]);
-  $('.page-content').append(article(arrArticles[0],arrArticles[1]));
-  $('.page-content').append(displayFooter());
+  showPage(arrArticles.slice(0, 2), "home"); //show the 1st 2 elements of the array arrArticles 
 
   var router = new Router({
 
       '/home': ()=>{ 
-        showPage(article(arrArticles[0],arrArticles[1]));
-        },
-        
-      '/kontakt': ()=>{ 
-        showPage(showContact);
+        showPage(arrArticles.slice(0, 2), "idArticle_home"); 
         },
 
         '/about': ()=>{ 
-          showPage(about_us(arrArticles[0]));
-
+          showPage(arrArticles[0], "idAboutus");
         },
 
         '/membership': ()=>{ 
-          showPage(membership(arrArticles[1]));  
+          showPage(arrArticles[1], "idMembership");
         },
 
         '/priority_areas': ()=>{ 
-          showPage(priority_areas(priorityAreas));          
+          showPage(priorityAreas, "idPriority_areas");         
         },
 
         '/team': ()=>{ 
-         showPage(displayTeam(team));            
+         showPage(team, "idTeam"); 
+        },
+        
+       '/kontakt': ()=>{ 
+         showPage(showContact);
         }
   });
 
 
-
 }
 
-function showPage(page){
+function showPage(eachObject, idItem){
     $('.page-content').empty();
     $('.page-content').append(displayNavbar());
-    $('.page-content').append(page);
-    $('.page-content').append(displayFooter());
+    var $sections = $('<section id="'+ idItem +'"></section>');
+
+    switch(idItem){
+      case "idArticle_home": 
+                    $('.page-content').append(article(eachObject));
+                    $('.page-content').append(displayFooter());
+                    break;
+
+      case "idAboutus": 
+                    $('.page-content').append($sections);
+                    $('#' + idItem).append(about_us(eachObject));  
+                     $('.page-content').append(displayFooter());                  
+                    break; 
+
+      case "idMembership": 
+                    $('.page-content').append($sections);
+                    $('#' + idItem).append(membership(eachObject)); 
+                     $('.page-content').append(displayFooter());                   
+                    break;       
+       case "idTeam":   //display team tab 
+                     $('.page-content').append($sections);
+                     /*var counterColumn = 0;  //to count td in the table
+                     var tableTeam = $(`<table class="tableTeam_class"></table>`);//creating a table
+                     $('#' + idItem).append(tableTeam); //putting the table on the section
+                     this.tableTeam_row; //declaring the row
+                      
+                     //displaying every team member in the table
+                     for (var prop in eachObject) {
+                      this.tableTeam_row = $('<tr class=" rowTeam_'+ counterColumn + '"></tr>');                      
+                      
+                      if(counterColumn%2 ===0){ //To creat a new row, 1 row has 2 columns
+                        
+                        $(tableTeam).append(this.tableTeam_row); 
+                        $(this.tableTeam_row).append('<td class="columnTableTeam col-xs-6 ">'+ displayTeam(eachObject[prop]) + '</td>'); 
+                        counterColumn++;  
+                      }
+                       else { //add a column on the row
+                        $('.rowTeam_'+ (counterColumn-1)).append('<td class="columnTableTeam  col-xs-6">'+ displayTeam(eachObject[prop]) + '</td>'); 
+                        counterColumn++;
+                        }
+
+                      }*/
+                      for (var prop in eachObject) {
+                        $('#' + idItem).append(displayTeam(eachObject[prop]));
+                      }
+                       $(displayFooter()).insertAfter('#' + idItem);//displaying the footer
+                      //$('#' + idItem).append(displayTeam(eachObject[prop]));
+                    //}
+                    break;
+
+      case "idPriority_areas": 
+                     $('.page-content').append($sections);
+                     for (var prop in eachObject) {
+                      $('#' + idItem).append(priority_areas(eachObject[prop]));
+                    }
+                    $('.page-content').append(displayFooter());
+                    break;
+      default: break
+    }
+   
   }
+
 

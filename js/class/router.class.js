@@ -43,7 +43,7 @@ class Router {
 
   */
 
-  constructor(routes){console.log("**********",  routes);
+  constructor(routes){
 
     var self = this;
 

@@ -1,26 +1,18 @@
 function displayTeam(team){ return`
-<section id="team">
-   <div class = "team_rows">
-     <div class="col-md-6 col-xs-12">
-	        <div><img class="team_picture col-md-2 col-xs-2 " src= "${team[0].picture}">
-	           <h3 class = "team_title col-md-10 col-xs-10">${team[0].headLine}</h3> 
-	        </div>  
-	        
-	        <p class = "team_text col-md-12 col-xs-12" >${team[0].text}</h3>      	        
-	  </div>
-	  <div class="col-md-6 col-xs-12">
-	        <div><img class="team_picture col-md-2 col-xs-2 " src= "${team[1].picture}">
-	           <h3 class = "team_title col-md-10 col-xs-10">${team[1].headLine}</h3> 
-	        </div>  
-	        
-	        <p class = "team_text col-md-12 col-xs-12" >${team[1].text}</h3>      	        
-	  </div>
-	</div>
-    
-	</div>
- 	
+     <!--<div class="div_class  col-md-12 col-xs-12">
+	        <div><img class="team_picture col-md-2 col-xs-12 " src= "${team.picture}">
+	           <h3 class = "team_title col-md-10 col-xs-12">${team.headLine}</h3> 
+	        </div>  	        
+	        <p class = "team_text col-md-12 col-xs-12" >${team.text}</h3>      	        
+	  </div>-->
 
+	<div class="teamdiv col-md-6 col-xs-12">
+	    <div><img class="team_picture col-md-2 col-xs-2 " src= "${team.picture}">
+	         <h3 class = "team_title col-md-10 col-xs-10">${team.headLine}</h3> 
+	    </div>  
+	        
+	    <p class = "team_text col-md-12 col-xs-12" >${team.text}</h3>     	        
+	</div>
 
-</section>
 `
 };

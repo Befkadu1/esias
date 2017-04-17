@@ -1,5 +1,5 @@
-function article (data1,data2){ return`
-<article class="article_home">
+function article (data){ return`
+<article class="idArticle_home">
  <section class="home_page1 col-xs-12">
    <div id= "home_image_div">
  	<h1 class="home_text1">Ethiopian</h1>
@@ -12,13 +12,13 @@ function article (data1,data2){ return`
 <section class= "home_page">
   <div class = "home_wrapper1 "><!--don't write col-xs-12 here, it will mess up the margin-->
 	<div class = "article_aboutus_home col-xs-12 col-md-8 ">
-		<h1 class="title">${data1.headLine}</h1>
-		<p >${data1.text}</p>
+		<h1 class="title">${data[0].headLine}</h1>
+		<p >${data[0].text}</p>
 	</div>
 	<div class="puffs col-xs-12 col-md-4">
 		 <a href="#" class="thumbnail">
 		 <img src="bird.jpg" class="img-responsive img-circle" style="display:inline" alt="Bird" height="350">
-	     <!--<img src= "${data1.picture}">-->
+	     <!--<img src= "${data[0].picture}">-->
 	    </a>
 		
 	</div>
@@ -28,8 +28,8 @@ function article (data1,data2){ return`
 
 <section class= "home_page "> 
 	<div class = "home_wrapper2 col-xs-12">
-		<h1 class="title">${data2.headLine}</h1>
-		<p >${data2.text}</p>
+		<h1 class="title">${data[1].headLine}</h1>
+		<p >${data[1].text}</p>
 	</div>
 
 </section>

@@ -11,7 +11,7 @@ section{
     width:85%; 
     text-align: center;
     display: block;
-    height: 100vh;
+    min-height: 100vh;
     margin:0 auto; /*to mmage the section horizontaly center */
 
 }
@@ -97,6 +97,22 @@ p{
 .priority_rows {
     overflow:auto;
 }
+.priority_areas_div{
+    display: block;
+    text-align: left;
+    overflow: auto;
+    min-height: 290px;
+    /*border: 2px solid black;*/
+    /*clear: left;*/
+}
+.teamdiv{
+    display: block;
+    text-align: left;
+    overflow: auto;
+    min-height: 320px;
+    /*border: 2px solid black;*/
+    /*clear: left;*/
+}
 /*.logo1{
   margin-top:50px;
   margin-left:25px;
@@ -111,7 +127,7 @@ p{
 }
 */
 /* mobile */
-@media (max-width:376px){
+@media (max-width:415px){
  section{
     width:100%; 
     height:auto !important;/*Resetting height of an HTML element via CSS*/
@@ -127,7 +143,30 @@ p{
 .priority_rows {
     margin-bottom: 50px;
 }
-
+p{
+    font-size: 12px;
+    text-align: left;
+    padding-left: 0px; 
+    padding-right: 0px;
+}
+h3{   
+   font-size: 15px; 
+ }
+.div_class{
+    text-align: left;
+    padding: 0px;
+    padding-left: 0px; 
+    padding-right: 0px;
+}
+.div_class p{   
+   font-size: 12px; 
+ }
+.priority_areas_div{
+  min-height:auto !important;/*Resetting height of an HTML element via CSS*/
+}
+.teamdiv{
+  min-height:auto !important;/*Resetting height of an HTML element via CSS*/
+}
 }
 
 /*mobile: orientation: landscape */
