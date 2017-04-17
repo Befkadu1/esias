@@ -1,0 +1,35 @@
+[
+	{
+		"id": "1",
+		"headLine": "Lund University",
+		"picture": "../pictures/lund_university.png",
+		"link":"http://www.lunduniversity.lu.se/"
+	},
+	{
+		"id": "2",
+		"headLine": "Bilda",
+		"picture": "../pictures/bilda.png",
+		"link":"https://bilda.nu/"
+	},
+	{
+		"id": "3",
+		"headLine": "Studiefrämjandet",
+		"picture": "../pictures/studie_framjandet.png",
+		"link":"http://www.studieframjandet.se/"
+	},	
+	{
+		"id": "4",
+		"headLine": "Lunds kummun",
+		"picture": "../pictures/lunds_kummun.png",
+		"link":"https://www.lund.se/"
+	},
+	{
+		"id": "5",
+		"headLine": "Folkuniversitetet",
+		"picture": "../pictures/folkuniversitetet.png",
+		"link":"http://www.folkuniversitetet.se/"
+	}
+
+
+
+]
