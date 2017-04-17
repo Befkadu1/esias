@@ -52,7 +52,7 @@ $.ajax({
 });
 */
 
-var arrArticles, priorityAreas, team; //An object to hold all the articles and the priority areas
+var arrArticles, priorityAreas, team, partners; //An object to hold all the articles and the priority areas
 //var priorityAreas = []; //An object to hold the priority areas
 $.getJSON("json/articles.json", function (data) { //get the articles from the json file
   console.log(data);
@@ -63,20 +63,24 @@ $.getJSON("json/articles.json", function (data) { //get the articles from the js
   $.getJSON("json/team.json", function (data) { //get the priorityAreas from the json file
     console.log(data);
   team = data;
+  $.getJSON("json/partners.json", function (data) { //get the priorityAreas from the json file
+    console.log(data);
+  partners = data;
   $(start);
+  });
   });
   });
 });
 
 function start(){
-  var showContact = contact();
   /*routing*/
   this.home = '/home'; 
-  this.kontakt = '/kontakt';
   this.about = '/about';
   this.about = '/membership';
   this.priority_areas = '/priority_areas';
   this.team = '/team';
+  this.partner = '/partner';
+  this.contact = '/contact';
   
   showPage(arrArticles.slice(0, 2), "home"); //show the 1st 2 elements of the array arrArticles 
 
@@ -101,9 +105,12 @@ function start(){
         '/team': ()=>{ 
          showPage(team, "idTeam"); 
         },
-        
-       '/kontakt': ()=>{ 
-         showPage(showContact);
+
+        '/partner': ()=>{ 
+         showPage(partners, "idpartners"); 
+        },
+       '/contact': ()=>{ 
+          showPage(arrArticles[2], "idContact");
         }
   });
 
@@ -131,7 +138,15 @@ function showPage(eachObject, idItem){
                     $('.page-content').append($sections);
                     $('#' + idItem).append(membership(eachObject)); 
                      $('.page-content').append(displayFooter());                   
-                    break;       
+                    break;    
+
+      case "idPriority_areas": 
+                     $('.page-content').append($sections);
+                     for (var prop in eachObject) {
+                      $('#' + idItem).append(priority_areas(eachObject[prop]));
+                    }
+                    $('.page-content').append(displayFooter());
+                    break;  
        case "idTeam":   //display team tab 
                      $('.page-content').append($sections);
                      /*var counterColumn = 0;  //to count td in the table
@@ -163,16 +178,32 @@ function showPage(eachObject, idItem){
                     //}
                     break;
 
-      case "idPriority_areas": 
-                     $('.page-content').append($sections);
+
+      case "idpartners": 
+                    $('.page-content').append($sections);
                      for (var prop in eachObject) {
-                      $('#' + idItem).append(priority_areas(eachObject[prop]));
+                      $('#' + idItem).append(displayPartners(eachObject[prop]));
                     }
                     $('.page-content').append(displayFooter());
                     break;
+
+      case "idContact": 
+                    $('.page-content').append($sections);
+                    $('#' + idItem).append(displayContact(eachObject));  
+                    $('.page-content').append(displayFooter());
+                    break;   
       default: break
     }
    
   }
+  $(document).on('click', '.aboutus_button', function(){
+    showPage(priorityAreas, "idPriority_areas");
+
+  });
+
+
+
+
+
 
 

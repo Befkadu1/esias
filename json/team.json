@@ -2,37 +2,37 @@
 	{
 		"id": "1",
 		"headLine": "Solomon Abebe",
-		"picture": "https://static.wixstatic.com/media/0eea4755fe7a4c0a84dafb7a5e7b6e04.png/v1/fill/w_115,h_115,al_c,usm_0.66_1.00_0.01/0eea4755fe7a4c0a84dafb7a5e7b6e04.png ",
-		"text": ["Solomon holds three Master degrees —Master of Science in New Venture Creation, Master of Arts in Applied Cultural Analysis, and Master of Arts in Anthropology . He currently works at Sten K. Johnson Centre for Entrepreneurship, Lund University."]		
+        "picture": "../pictures/solomon.png",
+        "text": ["Solomon holds three Master degrees —Master of Science in New Venture Creation, Master of Arts in Applied Cultural Analysis, and Master of Arts in Anthropology . He currently works at Sten K. Johnson Centre for Entrepreneurship, Lund University."]		
 	},
 	{
 		"id": "2",
 		"headLine": "Beliyou Eijgu",
-		"picture": "https://static.wixstatic.com/media/4f4d04e795e74febbe747fb6ca659a39.png/v1/fill/w_95,h_95,al_c,usm_0.66_1.00_0.01/4f4d04e795e74febbe747fb6ca659a39.png",
+		"picture": "../pictures/belyou.png",
 		"text": ["Beliyou has a Degree in Fine Art, and worked as glass engraver.  She is among the founders of ESIAS, and serve as a vice chairperson."]		
 	},
 	{
 		"id": "3",
 		"headLine": "Befkadu Degefa",
-		"picture": "https://static.wixstatic.com/media/0eea4755fe7a4c0a84dafb7a5e7b6e04.png/v1/fill/w_115,h_115,al_c,usm_0.66_1.00_0.01/0eea4755fe7a4c0a84dafb7a5e7b6e04.png ",
+		"picture": "../pictures/befkadu.png",
 		"text": ["Befkadu has BSc and MSc in Electrical Engineering. He has been electronics engineer and consultant for different organisations, among which include, Sony Mobile Communications, Sigma Connectivity, Ericsson and Sentra AB."]		
 	},
 	{
 		"id": "4",
 		"headLine": "Fikeraddis Damtie",
-		"picture": "https://static.wixstatic.com/media/4f4d04e795e74febbe747fb6ca659a39.png/v1/fill/w_95,h_95,al_c,usm_0.66_1.00_0.01/4f4d04e795e74febbe747fb6ca659a39.png",
+		"picture": "../pictures/fikreadis.png",
 		"text": ["Fikeraddis is a PhD candidate at the division of Mathematical physics at Lund University. His research area is simulation of quantum dynamics in nanostructures."]		
 	},
 	{
 		"id": "5",
 		"headLine": "Yohannis Wubeshet",
-		"picture": "https://static.wixstatic.com/media/4f4d04e795e74febbe747fb6ca659a39.png/v1/fill/w_95,h_95,al_c,usm_0.66_1.00_0.01/4f4d04e795e74febbe747fb6ca659a39.png",
+		"picture": "../pictures/yohannes.png",
 		"text": ["Yohannis has BSc and MSc in Mathematics. He has been working as a mathematics mentor at Lund University. Yohannis currently works a teacher at Lindängeskolan ."]		
 	},
 	{
 		"id": "6",
 		"headLine": "Misrak Tilahun",
-		"picture": "https://static.wixstatic.com/media/4f4d04e795e74febbe747fb6ca659a39.png/v1/fill/w_95,h_95,al_c,usm_0.66_1.00_0.01/4f4d04e795e74febbe747fb6ca659a39.png",
+		"picture": "../pictures/misrak.png",
 		"text": ["Misrak has BSc and MSc in Computer Science.  Previously, she worked as a web developer for Monkey Systems, and M currently, she is an Application Developer at IBM Client Innovation Center."]		
 	}
 
